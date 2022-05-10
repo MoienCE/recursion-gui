@@ -31,7 +31,7 @@ take a screenshot from the output of your program and save it as an image into t
 </div>
 
 
-# JavaFx 11
+# JavaFx 17
 
 <ul>
 <li>
