@@ -17,7 +17,7 @@ public class JavaFxApplication extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         primaryStage.setTitle("Koch snowflake");
         Group root = new Group();
         Canvas canvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
