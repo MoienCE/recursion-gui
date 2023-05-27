@@ -1,33 +1,30 @@
 package ir.ac.kntu;
 
 import javafx.application.Application;
-import javafx.geometry.Point2D;
+import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class JavaFxApplication extends Application {
 
+    private static final int CANVAS_WIDTH = 400, CANVAS_HEIGHT = 400;
+
     public static void main(String[] args) {
         launch(args);
     }
 
-    public void start(Stage stage) throws Exception {
-        Pane root = new Pane();
-        root.setStyle("-fx-border-width: 0 0 5 0; -fx-border-style: dotted;");
-        Scene scene = new Scene(root, 1000, 800, Color.RED);
-
-        //TODO your code goes here
-        // try to separate logic from GUI
-
-        RecursiveGUI recursiveGUI = new RecursiveGUI();
-        // Setting stage properties
-        stage.initStyle(StageStyle.UTILITY);
-        stage.setTitle("Recursion in JavaFX!");
-        stage.setScene(scene);
-        stage.show();
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle("Koch snowflake");
+        Group root = new Group();
+        Canvas canvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        RecursiveGUI.startPainting(gc);
+        root.getChildren().add(canvas);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 }
