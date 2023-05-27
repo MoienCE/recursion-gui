@@ -24,6 +24,7 @@ public class JavaFxApplication extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         RecursiveGUI.startPainting(gc);
         root.getChildren().add(canvas);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
