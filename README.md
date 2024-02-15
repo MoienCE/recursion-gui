@@ -1,7 +1,9 @@
 # Assignment discription
-  
+
+
+    Some examples:
+
   </alt>
-  Some examples:
 https://www.cs.princeton.edu/courses/archive/spr14/cos126/art/index.php
 
 http://www.cs.princeton.edu/courses/archive/fall14/cos126/art/index.php
